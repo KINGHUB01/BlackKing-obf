@@ -1,0 +1,117 @@
+                                                                                 local Library=        
+                                                                        loadstring(game:HttpGet(                        
+                                                                                                                                  
+                                                                                                                                        
+                                                                                                                                          
+                                                          "https://raw.githubusercontent.com/KINGHUB01/Gui/main/Gui%20Lib%20%5BLibrary%5D") 
+                                                        )();local ThemeManager=loadstring(game:HttpGet(                                       
+                                                      "https://raw.githubusercontent.com/KINGHUB01/Gui/main/Gui%20Lib%20%5BThemeManager%5D"))() 
+                                                    ;local SaveManager=loadstring(game:HttpGet(                                                   
+                                                  "https://raw.githubusercontent.com/KINGHUB01/Gui/main/Gui%20Lib%20%5BSaveManager%5D"))();Library: 
+                                                  Notify("Welcome to BlackKing  "   .. game.Players.LocalPlayer.DisplayName );Library:Notify(         
+                                                "Thx For Use");local Sound=Instance.new("Sound");Sound.Parent=game.SoundService;Sound.SoundId=          
+                                                "rbxassetid://4590662766";Sound.Volume=5;Sound.PlayOnRemove=true;Sound:Destroy();local Window=Library:    
+                                              CreateWindow({Title="BlackKing | Curse Battlegrounds | "   .. game.Players.LocalPlayer.DisplayName ,Center=   
+                                              true,AutoShow=true,TabPadding=5,MenuFadeTime=0.2});local Tabs={Main=Window:AddTab("Main")};local LeftGroupBox 
+                                            =Tabs.Main:AddLeftGroupbox("LocalPlayer");game:GetService("RunService").RenderStepped:Connect(function() pcall(   
+                                            function() if _G.SpeedHack then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=_G.SelectBoots;end end);end); 
+                                          game:GetService("RunService").RenderStepped:Connect(function() pcall(function() if _G.FieldOfView then game:GetService( 
+                                          "Workspace").Camera.FieldOfView=_G.FieldOfViewe;end end);end);game:GetService("RunService").RenderStepped:Connect(        
+                                          function() pcall(function() if _G.BootsSpeed then game.Players.LocalPlayer.Character:TranslateBy((game.Players.LocalPlayer. 
+                                          Character.Humanoid.MoveDirection * SelectBoots)/_G.Boots );end end);end);LeftGroupBox:AddSlider("MySliderspeed",{Text=      
+                                        ">Speed< ",Default=35,Min=16,Max=100,Rounding=0,Compact=true,Callback=function(SelectBootsez) _G.SelectBoots=SelectBootsez;end} 
+                                        );LeftGroupBox:AddSlider("MySlider",{Text=">Field of View< ",Default= --[[==============================]]70,Min=70,Max=120,      
+                                        Rounding=0,Compact=true,Callback=function(FieldOfViewse) _G --[[============================================]].FieldOfViewe=      
+                                        FieldOfViewse;end});_G.Boots=150;_G.FieldOfViewe=70;_G. --[[======================================================]]SelectBoots=75; 
+                                      LeftGroupBox:AddToggle("MyToggle",{Text=              --[[==========================================================]]"Enable Speed",   
+                                      Default=false,Tooltip="Speed Boots",Callback=       --[[==============================================================]]function(HACKS) 
+                                       _G.SpeedHack=HACKS;end});LeftGroupBox:AddToggle(   --[[================================================================]]"MyToggle",{    
+                                      Text="Enable Field of View",Default=false,Tooltip=  --[[==================================================================]]              
+                                      "Field of View Hack",Callback=function(FieldOfViews --[[==================================================================]]) if (            
+                                    FieldOfViews==true) then local TweenService=game:     --[[====================================================================]]GetService(   
+                    "TweenService");TweenService:Create(game.Workspace.CurrentCamera,     --[[====================================================================]]TweenInfo.new(  
+              0.7),{FieldOfView=_G.FieldOfViewe}):Play();elseif (FieldOfViews==false)     --[[======================================================================]]then local    
+            TweenService=game:GetService("TweenService");TweenService:Create(game.        --[[======================================================================]]Workspace.    
+          CurrentCamera,TweenInfo.new(0.7),{FieldOfView=70}):Play();end wait(0.6);_G.     --[[======================================================================]]FieldOfView=  
+        FieldOfViews;end});game:GetService("RunService").RenderStepped:Connect(function() --[[======================================================================]] pcall(       
+        function() if _G.Stoptimes then game.Workspace.World.Characters["Infinity Dummy"] --[[======================================================================]].             
+      HumanoidRootPart.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  --[[======================================================================]]* CFrame.new( 
+      0,0,1.5) ;end end);end);LeftGroupBox:AddToggle("MyToggle",{Text="Stop Time",Default=  --[[==================================================================]]false,Tooltip=  
+      "Stop Time",Callback=function(Stoptime) _G.Stoptimes=Stoptime;end});local             --[[================================================================]]LeftGroupBox=Tabs 
+    .Main:AddRightGroupbox("Main");game:GetService("RunService").Heartbeat:Connect(function --[[==============================================================]]() pcall(function 
+    () if (_G.espplayersaf==true) then if  not game.Players.LocalPlayer.Character:            --[[==========================================================]]FindFirstChild(     
+    "Esp") then local players=game.Players:GetPlayers();for i,v in pairs(players) do local esp= --[[====================================================]]Instance.new(           
+    "Highlight");esp.Name="Esp";esp.FillColor=Color3.fromRGB(255,0,0);esp.FillTransparency=0.3;   --[[==============================================]]esp.OutlineColor=Color3.  
+    fromRGB(255,0,0);esp.OutlineTransparency=0;esp.Parent=v.Character;end end elseif (_G.espplayersaf --[[====================================]]==false) then if game.Players 
+    .LocalPlayer.Character:FindFirstChild("Esp") then local players=game.Players:GetPlayers();for i,v in  --[[========================]]pairs(players) do v.Character.Esp:    
+    Destroy();end end end end);end);LeftGroupBox:AddToggle("MyToggle",{Text="Esp Players",Default=false,Tooltip="Esp Players",Callback=function(espplayersafe) _G.          
+  espplayersaf=espplayersafe;end});LeftGroupBox:AddToggle("MyToggle",{Text="Auto Blocking",Default=false,Tooltip="Blocking",Callback=function(AutoBle) _G.AutoBl=AutoBle; 
+  while _G.AutoBl do wait(0.2);pcall(function() local args={[1]="startBlocking"};game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Combat"):    
+  WaitForChild("block"):FireServer(unpack(args));end);end end});local LeftGroupBox=Tabs.Main:AddRightGroupbox("Spam Red (Gojo)");local Red=LeftGroupBox:AddLabel(         
+  "Status : ?");game:GetService("RunService").RenderStepped:Connect(function() pcall(function() if game.Workspace.World.Abilities:FindFirstChild("Reversal Red Blast")    
+  then Red:Set("Status : Work");else Red:Set("Status : Not Work (Use Red and Equip Red)");end end);end);local MyButton=LeftGroupBox:AddButton({Text="Check Status",Func=  
+  function() if game.Workspace.World.Abilities:FindFirstChild("Reversal Red Blast") then Library:Notify("Status : Work");local Sound=Instance.new("Sound");Sound.Parent=  
+  game.SoundService;Sound.SoundId="rbxassetid://4590662766";Sound.Volume=5;Sound.PlayOnRemove=true;Sound:Destroy();else Library:Notify(                                   
+  "Status : Not Work (Use Red and Equip Red)");local Sound=Instance.new("Sound");Sound.Parent=game.SoundService;Sound.SoundId="rbxassetid://4590662766";Sound.Volume=5;   
+  Sound.PlayOnRemove=true;Sound:Destroy();end end,DoubleClick=false,Tooltip="Use If Status Is Bug"});_G.cfream="Cfream";LeftGroupBox:AddInput("MyTextbox",{Default=       
+  "Cfream",Numeric=false,Finished=false,Text="Paste CFream Here",Tooltip="Need CFream",Placeholder="Paste CFream Here",Callback=function(cfreams) _G.cfream=cfreams;end}) 
+  ;local MyButton=LeftGroupBox:AddButton({Text="Copy Cfream",Func=function() setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame));local     
+  Sound=Instance.new("Sound");Sound.Parent=game.SoundService;Sound.SoundId="rbxassetid://4590662766";Sound.Volume=5;Sound.PlayOnRemove=true;Sound:Destroy();end,DoubleClick 
+  =false,Tooltip="Copy Cfream"});LeftGroupBox:AddToggle("MyToggle",{Text="Spam Red (Bug)",Default=false,Tooltip="Need Cfream",Callback=function(Redspams) _G.SpamReds=      
+  Redspams;while _G.SpamReds do wait(0.01);pcall(function() local args={[1]="Explode Red",[2]=workspace:WaitForChild("World"):WaitForChild("Abilities"):WaitForChild(       
+  "Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new(_G.cfream)};game:GetService("Players").LocalPlayer.Character.Red.Scripts:FindFirstChild(            
+  "Skill Handler").Communicator:FireServer(unpack(args));end);end end});LeftGroupBox:AddToggle("MyToggle",{Text="Spam Red In Spawn",Default=false,Tooltip="Use Red",        
+  Callback=function(Redspam) _G.SpamRed=Redspam;while _G.SpamRed do wait(0.01);pcall(function() local args={[1]="Explode Red",[2]=workspace:WaitForChild("World"):          
+  WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new(0.746999979,1.75, -4.75,1,0,0,0,1,0,0,0,1)};game:GetService( 
+  "Players").LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").Communicator:FireServer(unpack(args));local args={[1]="Explode Red",[2]=workspace:           
+  WaitForChild("World"):WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new( -133.268799,0.282042265, -125.779427, 
+  1,0,0,0,1,0,0,0,1)};game:GetService("Players").LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").Communicator:FireServer(unpack(args));local args={[1]=   
+  "Explode Red",[2]=workspace:WaitForChild("World"):WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new(132.032227 
+  ,0.282042205,122.604576,1,0,0,0,1,0,0,0,1)};game:GetService("Players").LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").Communicator:FireServer(unpack(  
+  args));local args={[1]="Explode Red",[2]=workspace:WaitForChild("World"):WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4] 
+  =Vector3.new( -270.568298,0.282042205, -0.337425232,1,0,0,0,1,0,0,0,1)};game:GetService("Players").LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").   
+  Communicator:FireServer(unpack(args));local args={[1]="Explode Red",[2]=workspace:WaitForChild("World"):WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):   
+  WaitForChild("Blast"),[3]=false,[4]=Vector3.new( -270.568298,0.282042205, -0.337425232,1,0,0,0,1,0,0,0,1)};game:GetService("Players").LocalPlayer.Character.Red.Scripts 
+    :FindFirstChild("Skill Handler").Communicator:FireServer(unpack(args));local args={[1]="Explode Red",[2]=workspace:WaitForChild("World"):WaitForChild("Abilities"):   
+    WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new(275.631683,0.282042205, -278.037476,1,0,0,0,1,0,0,0,1)};game:GetService("Players") 
+    .LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").Communicator:FireServer(unpack(args));local args={[1]="Explode Red",[2]=workspace:WaitForChild(    
+    "World"):WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new( -269.568268,0.282042205,270.662537,1,0,0,0,1,0 
+      ,0,0,1)};game:GetService("Players").LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").Communicator:FireServer(unpack(args));local args={[1]=      
+      "Explode Red",[2]=workspace:WaitForChild("World"):WaitForChild("Abilities"):WaitForChild("Reversal Red Blast"):WaitForChild("Blast"),[3]=false,[4]=Vector3.new(   
+      2.83169174,0.282042205,401.262512,1,0,0,0,1,0,0,0,1)};game:GetService("Players").LocalPlayer.Character.Red.Scripts:FindFirstChild("Skill Handler").Communicator:  
+        FireServer(unpack(args));end);end end});local LeftGroupBox=Tabs.Main:AddRightGroupbox("Awaken");_G.Texta="EZZZZZZZZZZ";LeftGroupBox:AddInput("MyTextbox",{      
+        Default="EZZZZZZZZZZ",Numeric=false,Finished=false,Text="Text Awaken",Tooltip="Need Awaken",Placeholder="Text Awaken",Callback=function(Textae) _G.Texta=Textae 
+        ;end});LeftGroupBox:AddToggle("MyToggle",{Text="Spam Text Awaken",Default=false,Tooltip="Need Awaken",Callback=function(wakene) _G.Awaken=wakene;while _G.      
+          Awaken do wait();pcall(function() local args={[1]="Animation Signal",[2]="Dialogue",[3]=_G.Texta};game:GetService("ReplicatedStorage"):WaitForChild(        
+            "Events"):WaitForChild("Player"):WaitForChild("awakening"):FireServer(unpack(args));end);end end});LeftGroupBox:AddToggle("MyToggle",{Text=               
+              "Spam Effect Gojo Awaken",Default=false,Tooltip="Need Awaken",Callback=function(wakeneEffect) _G.AwakenEffect=wakeneEffect;while _G.AwakenEffect do     
+                wait();pcall(function() local args={[1]="Animation Signal",[2]="Ascend",[3]="0"};game:GetService("ReplicatedStorage"):WaitForChild("Events"):         
+                  WaitForChild("Player"):WaitForChild("awakening"):FireServer(unpack(args));end);end end});local LeftGroupBox=Tabs.Main:AddLeftGroupbox("Teleport") 
+                      ;local MyButton=LeftGroupBox:AddButton({Text="Map",Func=function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -   
+                                  2.10743165,3.88030601, -18.8858452, -0.999961853, -3.7106112e-8,0.00873377081, -3.6882394e-8,1,2.5776304e-8, -0.00873377081,   
+                                      2.5453197e-8, -0.999961853);end,DoubleClick=false,Tooltip="Teleport to Map"});local MyButton=LeftGroupBox:AddButton({Text=   
+                                      "Map Barrier",Func=function() game.Players.LocalPlayer.               Character.HumanoidRootPart.CFrame=CFrame.new(4.8772049, 
+                                      288.497711,11.2762194,0.999961972, -5.6015775e-8,                    0.00871935859,5.5383243e-8,1,7.2784715e-8, -        
+                                      0.00871935859, -7.2299045e-8,0.999961972);end,DoubleClick=           false,Tooltip="Teleport to Map Barrier"});local       
+                                      MyButton=LeftGroupBox:AddButton({Text="Building",Func=                function() game.Players.LocalPlayer.Character.        
+                                      HumanoidRootPart.CFrame=CFrame.new(270.460602,1358.21704,               1419.56274, -0.999961913, -1.0558488e-7, -         
+                                      0.00872975588, -1.05369345e-7,1, -2.5149507e-8,                       0.00872975588, -2.42287e-8, -0.999961913);end,     
+                                      DoubleClick=false,Tooltip="Teleport to Building"});local Tabs           ={["UI Settings"]=Window:AddTab("UI Settings")};  
+                                        local FrameTimer=tick();local FrameCounter=0;local FPS=60;            local WatermarkConnection=game:GetService(        
+                                        "RunService").RenderStepped:Connect(function() FrameCounter             +=1 if ((tick() -FrameTimer)>=1) then FPS=      
+                                        FrameCounter;FrameTimer=tick();FrameCounter=0;end Library:              SetWatermark((                                
+                                        "BlackKing >Curse Battlegrounds< | %s fps | %s ms"):                    format(math.floor(FPS),math.floor(game:       
+                                        GetService("Stats").Network.ServerStatsItem["Data Ping"]:                 GetValue())));end);Library.KeybindFrame.  
+                                        Visible=false;Library:OnUnload(function()                                 WatermarkConnection:Disconnect();print(   
+                                          "Unloaded!");Library.Unloaded=true;end);local MenuGroup                   =Tabs["UI Settings"]:AddLeftGroupbox( 
+                                          "Menu");MenuGroup:AddButton("Unload",function()                             Library:Unload();end);MenuGroup 
+                                            :AddLabel("Menu bind"):AddKeyPicker("MenuKeybind",{                         Default="End",NoUI=true,  
+                                            Text="Menu keybind"});Library.ToggleKeybind=                                      Options.    
+                                              MenuKeybind;ThemeManager:SetLibrary(Library); 
+                                                SaveManager:SetLibrary(Library);          
+                                                    SaveManager:IgnoreThemeSettings();  
+                                                          SaveManager:            
+
+
+--------------------------------------------------------------------------------
+SetIgnoreIndexes({"MenuKeybind"});ThemeManager:SetFolder("MyScriptHub");SaveManager:SetFolder("MyScriptHub/specific-game");SaveManager:BuildConfigSection(Tabs["UI Settings"]);ThemeManager:ApplyToTab(Tabs["UI Settings"]);SaveManager:LoadAutoloadConfig();
