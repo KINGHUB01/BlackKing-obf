@@ -1,5 +1,11 @@
 --You is Gay
 task.spawn(function()
+if game.Players.LocalPlayer.UserId == 7224002246 then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Notification", -- Required
+	Text = "Your Account Got Hacked LOL", -- Required
+	Icon = "rbxassetid://" -- Optional
+})
 wait(5)
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Notification", -- Required
@@ -30,13 +36,8 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Text = "look behind you", -- Required
 	Icon = "rbxassetid://" -- Optional
 })
+
+end
 end)
-
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Notification", -- Required
-	Text = "Your Account Got Hacked LOL", -- Required
-	Icon = "rbxassetid://" -- Optional
-})
-
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Real"))()
