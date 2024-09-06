@@ -1,6 +1,6 @@
 --You is 2
 task.spawn(function()
-if game.Players.LocalPlayer.UserId == 7224002246 then
+if game.Players.LocalPlayer.UserId == 1 then
     game:GetService("StarterGui"):SetCore("SendNotification",{
         Title = "Notification", -- Required
         Text = "Hello", -- Required
