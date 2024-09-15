@@ -1,57 +1,6 @@
---You is 2
-task.spawn(function()
-if game.Players.LocalPlayer.UserId == 1 then
-    game:GetService("StarterGui"):SetCore("SendNotification",{
-        Title = "Notification", -- Required
-        Text = "Hello", -- Required
-        Icon = "rbxassetid://" -- Optional
-    })
-wait(5)
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Notification", -- Required
-	Text = "You again????", -- Required
-	Icon = "rbxassetid://" -- Optional
-})
-wait(10)
-local Sound = Instance.new("Sound")
-Sound.Parent = game.SoundService
-Sound.SoundId = "rbxassetid://6322610816"
-Sound.Volume = 5
-Sound.PlayOnRemove = true
-Sound:Destroy()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Notification", -- Required
-	Text = "again again again again", -- Required
-	Icon = "rbxassetid://" -- Optional
-})
-wait(10)
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Notification", -- Required
-	Text = "Umm..", -- Required
-	Icon = "rbxassetid://" -- Optional
-})
-wait(20)
-local Sound = Instance.new("Sound")
-Sound.Parent = game.SoundService
-Sound.SoundId = "rbxassetid://1409001904"
-Sound.Volume = 2.5
-Sound.PlayOnRemove = true
-Sound:Destroy()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Notification", -- Required
-	Text = "im in your Home :/", -- Required
-	Icon = "rbxassetid://" -- Optional
-})
-end
-end)
-
-if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Mines" then
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Notification", -- Required
 	Text = "Go Use New!", -- Required
 	Icon = "rbxassetid://" -- Optional
 })
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDoorsKing/DoorsCode/main/Floor2"))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Real"))()
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDoorsKing/Doors/main/Main"))()
